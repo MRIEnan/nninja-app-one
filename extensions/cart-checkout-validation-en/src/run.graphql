@@ -1,0 +1,20 @@
+query RunInput {
+  buyerJourney{
+    step
+  }
+  cart {
+    buyerIdentity {
+      customer {
+        numberOfOrders
+      }
+    }
+    cost {
+      subtotalAmount {
+        amount
+      }
+    }
+    lines {
+      quantity
+    }
+  }
+}

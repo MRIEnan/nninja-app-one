@@ -9,6 +9,9 @@ embedded = true
 dev_store_url = "nninja.myshopify.com"
 include_config_on_deploy = true
 
+[access.admin]
+direct_api_mode = "online"
+
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
 scopes = "read_customer_events,read_discounts,read_orders,read_products,write_discounts,write_orders,write_pixels,write_products"
@@ -18,6 +21,11 @@ redirect_urls = [ "https://shopify.dev/apps/default-app-home/api/auth" ]
 
 [webhooks]
 api_version = "2024-01"
+
+[app_proxy]
+url = "https://nninja.myshopify.com/apps/ninjastor"
+subpath = "ninjastor"
+prefix = "apps"
 
 [pos]
 embedded = false
